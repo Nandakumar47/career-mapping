@@ -1,0 +1,22 @@
+.navbar .navbar-nav .nav-link{
+    color: #ffffff;
+    font-weight: 700;
+    margin-right: 20px;
+}
+.navbar .navbar-brand {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: #EEEEEE;
+    font-size: 2em;
+    margin-left: 40px;
+  
+  }
+  .navbar{
+      background-color:#112031 ;
+      height: 90px;
+  }
+  .navbar-collapse{
+      justify-content: right;
+      padding-right: 100px;
+  }
+    

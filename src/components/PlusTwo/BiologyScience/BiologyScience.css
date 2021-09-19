@@ -1,0 +1,8 @@
+.Bio__main__div{
+    background: #EEF0F4;
+    height: 100vh;
+    display: flex;
+    padding: 100px 150px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

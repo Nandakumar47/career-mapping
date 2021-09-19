@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import HomePage from "./components/Home/HomePage";
+import NavBar from "./components/Navbar/NavBar";
+import BiologyScience from "./components/PlusTwo/BiologyScience/BiologyScience";
+import ComputerScience from "./components/PlusTwo/ComputerScience/ComputerScience";
+import Commerce from "./components/PlusTwo/Commerce/Commerce";
+import Humanities from "./components/PlusTwo/Humanities/Humanities";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router basename="/">
+        <NavBar />
+        <Switch>
+          <Route path="/" exact>
+            <HomePage />
+          </Route>
+          <Route path="/BiologyScience" exact>
+            <BiologyScience />
+          </Route>
+          <Route path="/ComputerScience" exact>
+            <ComputerScience />
+          </Route>
+          <Route path="/Commerce" exact>
+            <Commerce />
+          </Route>
+          <Route path="/Humanities" exact>
+            <Humanities />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
